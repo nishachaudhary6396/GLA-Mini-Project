@@ -10,8 +10,8 @@ import Footer from './Components/Footer/Footer';
 import men_banner from './Assets/banner_mens.png';
 import women_banner from './Assets/banner_women.png';
 import kid_banner from './Assets/banner_kids.png';
-import Checkout from './Pages/Checkout';
-import OrderConfirmation from './Pages/OrderConfirmation/OrderConfirmation';
+// import Checkout from './Pages/Checkout';
+// import OrderConfirmation from './Pages/OrderConfirmation/OrderConfirmation';
 
 function App() {
   return (
@@ -36,8 +36,8 @@ function App() {
             <Route path=":productId" element={<Product />} />
           </Route>
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/order-confirmation" element={<OrderConfirmation />} />
+          {/* <Route path="/checkout" element={<Checkout />} />
+          <Route path="/order-confirmation" element={<OrderConfirmation />} /> */}
           <Route path="/login" element={<LoginSignup />} />
         </Routes>
         <Footer />

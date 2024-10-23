@@ -1,5 +1,5 @@
 import './navbar.css';
-import logo from '../../Assets/logo.png';
+import logo from '../../Assets/logo01.jpg';
 import cart_icon from '../../Assets/cart_icon.png';
 import nav_dropdown from '../../Assets/nav_dropdown.png';
 import { useContext, useRef, useState } from 'react';
@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="nav-logo">
         <img src={logo} alt="" />
-        <p>ShopSphere</p>
+        <p>EverTrend</p>
       </div>
 
       <img

@@ -1,5 +1,5 @@
 import './Footer.css';
-import footer_logo from '../../Assets/logo_big.png';
+import footer_logo from '../../Assets/logo01.jpg';
 import pintester_icon from '../../Assets/pintester_icon.png';
 import instagram_icon from '../../Assets/instagram_icon.png';
 import whatsapp_icon from '../../Assets/whatsapp_icon.png';
@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-logo">
         <img src={footer_logo} alt="" />
-        <p>ShopSphere</p>
+        <p>EverTrend</p>
       </div>
 
       <ul className="footer-links">
@@ -37,7 +37,7 @@ const Footer = () => {
 
       <div onClick={scrollToTop} className="footer-copyright">
         <hr />
-        <p>&copy; 2024 Shopper. All rights reserved.</p>
+        <p>&copy; 2024 EverTrend. All rights reserved.</p>
       </div>
     </div>
   );
