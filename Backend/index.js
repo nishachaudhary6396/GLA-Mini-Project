@@ -169,6 +169,57 @@ app.get('/allproducts',async (req,res)=>{
     res.send(products);
 })
 
+// schema creating for user model
+const users = mongoose.model('Users' , {
+    name: {
+        type:String,
+    }
+    ,
+    email:{
+        type:String,
+        unique:true,
+    },
+    password:{
+        type:String,
+
+    },
+    cartData:{
+        type:Object,
+
+    },
+    date:{
+        type:Date,
+        default:Date.now,
+    }
+})
+
+// creating endpoint for registering the user
+app.post('/signup',async (req ,res)=>{
+    let check = await users.findOne ({email:req.body.email});
+    if(check){
+        return res.status(400).json({success:false,error:"existing user found with same email address"})
+    }
+    let cart = {};
+    for(let i = 0; i< 300; i++){
+        cart[i]= 0;
+    }
+    const  user = new Users({
+        name:req.body.username,
+        email:req.body.email,
+        password:req.body.password,
+        cartData:cart,
+    })
+    await user.save(); // user will be  save
+
+    const data = {
+        user:{
+            id:user.id
+        }
+    }
+    const token = jwt.sign(data,'secret_ecom'); 
+    res.json({success:true,token}) 
+})
+
 
 app.listen(port,(error)=>{
     if(!error){
