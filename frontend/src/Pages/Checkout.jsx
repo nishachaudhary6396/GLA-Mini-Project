@@ -1,13 +1,13 @@
 
 
-import CheckoutPage from '../Components/CheckoutPage/CheckoutPage';
+// import CheckoutPage from '../Components/CheckoutPage/CheckoutPage';
 
-const Checkout = () => {
-  return (
-    <div>
-      <CheckoutPage />
-    </div>
-  );
-};
+// const Checkout = () => {
+//   return (
+//     <div>
+//       <CheckoutPage />
+//     </div>
+//   );
+// };
 
-export default Checkout;
+// export default Checkout;
